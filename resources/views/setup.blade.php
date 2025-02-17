@@ -19,7 +19,7 @@
         @csrf
         <div class="mb-3">
             <label for="db-host" class="form-label">Database Host</label>
-            <input type="text" class="form-control" id="db_host" name="db-host" >
+            <input type="text" class="form-control" id="db_host" name="db-host" value="{{ old('db_host', env('DB_HOST', 'localhost') )}}" >
         </div>
         <div class="mb-3">
             <label for="db_port" class="form-label">Database Port</label>
