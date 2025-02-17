@@ -18,6 +18,10 @@
     <form id="setup-form" action="{{ route('setup.run')}}" method="POST">
         @csrf
         <div class="mb-3">
+            <label for="db-connection" class="form-label">Database Connection</label>
+            <input type="text" class="form-control" id="db_connection" name="db-connection" value="{{ old('db_connection', env('DB_CONNECTION', 'mysql') )}}" >
+        </div>
+        <div class="mb-3">
             <label for="db-host" class="form-label">Database Host</label>
             <input type="text" class="form-control" id="db_host" name="db-host" value="{{ old('db_host', env('DB_HOST', 'localhost') )}}" >
         </div>

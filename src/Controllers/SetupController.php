@@ -18,6 +18,7 @@ class SetupController extends Controller
     public function runSetup(Request $request)
     {
         $validate = $request->validate([
+            'db_connection' => 'required|string',
             'db_host' => 'nullable|string',
             'db_port' => 'required|numeric',
             'db_database' => 'required|string',

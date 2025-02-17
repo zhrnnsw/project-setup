@@ -14,6 +14,7 @@ class EnvironmentManager
 
         // Mapping manual key ke format .env yang benar
         $keyMapping = [
+            'db_connection' => 'DB_CONNECTION',
             'db_port' => 'DB_PORT',
             'db_database' => 'DB_DATABASE',
             'db_username' => 'DB_USERNAME',
